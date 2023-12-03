@@ -21,4 +21,4 @@ jobs:
 
       - name: Pushing to S3
         run: |
-          aws s3 sync . "s3://fitness4me.online"
+          aws s3 sync . "s3://fitness4me.online" --exclude ".git/*" --exclude ".github/*"
