@@ -16,8 +16,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-south-1
-          aws-access-key-id: ${{secrets.S3_KEYS}}
-          aws-secret-access-key: ${{secrets.S3_PASS}}
+          aws-access-key-id: ${{secrets.S3_KEY}}
+          aws-secret-access-key: ${{secrets.S3_PASSKEY}}
 
       - name: Pushing to S3
         run: |
