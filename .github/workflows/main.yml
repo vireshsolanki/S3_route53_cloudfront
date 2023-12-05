@@ -18,9 +18,9 @@ jobs:
           aws-region: ap-south-1
           aws-access-key-id: ${{secrets.S3_KEY}}
           aws-secret-access-key: ${{secrets.S3_PASSKEY}}
-      - name: Delete from S3
-        run: aws s3 rm s3://fitness4me.online/ --recursive
-      # - name: Pushing to S3
-      #   run: |
-      #     aws s3 sync . "s3://fitness4me.online" --exclude ".git/*" --exclude ".github/*"
+      # - name: Delete from S3
+      #   run: aws s3 rm s3://fitness4me.online/ --recursive
+      - name: Pushing to S3
+        run: |
+          aws s3 sync . "s3://fitness4me.online" --exclude ".git/*" --exclude ".github/*"
       
