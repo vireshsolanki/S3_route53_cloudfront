@@ -22,5 +22,5 @@ jobs:
       #   run: aws s3 rm s3://fitness4me.online/ --recursive
       - name: Pushing to S3
         run: |
-          aws s3 sync . "s3://fitness4me.online" --exclude ".git/*" --exclude ".github/* --exclude "terraform/*""
+          aws s3 sync . "s3://fitness4me.online" --exclude ".git/*" --exclude ".github/*" --exclude "terraform/*""
       
